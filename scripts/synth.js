@@ -4,12 +4,19 @@ var synth = (function() {
 
     function init() {
         // Private attributes
-        var context = new (window.AudioContext || window.webkitAudioContext);
+        var audioContext = new (window.AudioContext || window.webkitAudioContext);
 
+        var noteTable = initNoteTable();
+
+        function initNoteTable() {
+            
+        }
+        
         return {
             // Public attributes
-            startTone: function() {},
-            stopTone: function() {}
+            startTone: function(note) {},
+            stopTone: function(note) {},
+            setTone: function(waveArray) {}
         }
     }
 
